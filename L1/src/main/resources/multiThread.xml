@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="Suite" parallel="classes" thread-count="2">
+    <!--
+    参数：
+        parallel：执行测试用例的并行方式
+        thread-count：执行测试用例的线程数
+        classes：执行测试用例的类
+        methods：执行测试用例的方法
+        groups：执行测试用例的组
+    parallel="methods" 每个测试用例都都可以在不同的线程中执行
+    parallel="classes" 同一个class标签中的每个用例都只能在同一个线程中执行，不同classes标签中每个用例都可以在不同线程中执行
+    parallel="tests" 同一个test标签中的用例都只能在同一个线程中执行，不同的test标签中每个用例都可以在不同线程中执行
+    -->
+    <test name="Test1">
+        <classes name="甲级">
+            <class name="com.course.testng.multiThread.multiThreadByXml" />
+            <class name="com.course.testng.BasicAnnotation"/>
+        </classes>
+<!--        <classes name="乙级">-->
+<!--            <class name="com.course.testng.BasicAnnotation"/>-->
+<!--        </classes>-->
+    </test>
+
+
+
+
+</suite>
